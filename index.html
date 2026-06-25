@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SI DODO</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+
 <style>
 *{
     margin:0;
@@ -101,23 +100,19 @@ section{
     margin-bottom:40px;
     color:#0d3b66;
     font-size:35px;
-    }
+}
 
-/* MY FAMILY */
-.My Family{
+/* PROFIL */
+.my-family{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
     gap:40px;
     align-items:center;
 }
 
-.My Family{
-    width:100%;
-    border-radius:10px;
-}
-
-.My Family p{
+.my-family p{
     line-height:1.8;
+    font-size:18px;
 }
 
 /* GALLERY */
@@ -137,6 +132,26 @@ section{
 
 .gallery img:hover{
     transform:scale(1.05);
+}
+
+/* VIDEO */
+.video-container{
+    position:relative;
+    width:100%;
+    max-width:800px;
+    margin:auto;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.video-container iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
 
 /* CONTACT */
@@ -172,9 +187,6 @@ footer{
 }
 
 @media(max-width:768px){
-    .profile{
-        grid-template-columns:1fr;
-    }
 
     .hero h1{
         font-size:38px;
@@ -187,9 +199,14 @@ footer{
     nav ul{
         margin-top:10px;
     }
+
+    nav ul li{
+        margin:10px;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -197,8 +214,10 @@ footer{
 <div class="logo">ICIMOT</div>
 
 <ul>
-<li><a href="#my family">My Family</a></li>
+<li><a href="#profil">My Family</a></li>
 <li><a href="#galeri">Galeri</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#kontak">Kontak</a></li>
 </ul>
 </nav>
 
@@ -208,22 +227,22 @@ footer{
 Mengisi harimu dengan berbagai kejahilan
 </p>
 
-<a href="https://wa.me/6285189657014" class="btn">
+<a href="https://wa.me/6285189657014"
+class="btn"
+target="_blank">
 Terus tonton aksinya
 </a>
 </div>
 </header>
 
-<section id="My Family">
+<section id="profil">
 <h2 class="section-title">Profil Dodo</h2>
 
-<div class="My Family">
-
-<div class="My Family-text">
+<div class="my-family">
 <p>
-<strong>DODO</strong> Bocah berusia 1 tahun dengan berbagai kejahilan dengan tingkah lucunya yang menggemaskan
+<strong>DODO</strong> Bocah berusia 1 tahun dengan berbagai
+kejahilan dengan tingkah lucunya yang menggemaskan.
 </p>
-</div>
 </div>
 </section>
 
@@ -231,15 +250,28 @@ Terus tonton aksinya
 <h2 class="section-title">Galeri Kegiatan</h2>
 
 <div class="gallery">
-
 <img src="dodo.png" alt="">
 <img src="dodo.png" alt="">
 <img src="dodo.png" alt="">
 <img src="dodo.png" alt="">
 <img src="dodo.png" alt="">
 <img src="dodo.png" alt="">
-
 </div>
+</section>
+
+<section id="video">
+<h2 class="section-title">Video Dodo</h2>
+
+<div class="video-container">
+<iframe
+src="https://www.youtube.com/embed/657BmRAuL5Y"
+title="Video Dodo"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+</div>
+
 </section>
 
 <section id="kontak">
